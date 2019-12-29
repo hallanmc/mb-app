@@ -1,7 +1,11 @@
 <h1>Message board homepage</h1>
-<ul>
-	{% for postblog in all_posts_list %}
-		<li>{{postblog.text}}</li>
-	{% endfor %}
+{% if len(all_posts_list)>=3 %}
+	<ul>
+		{% for postblog in all_posts_list %}
+			<li>{{postblog.text}}</li>
+		{% endfor %}
 
-</ul>
+	</ul>
+{% else %}
+	<p>Trere is less them 3 items</p>
+{% endif %}
