@@ -1,5 +1,5 @@
 <h1>Message board homepage</h1>
-{% lista=[] %}
+{{lista=[]}}
 {% for postblog in all_posts_list %}
 	{{lista.append(postblog)}}
 {% if len(lista) <= 3 %}
