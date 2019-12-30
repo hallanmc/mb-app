@@ -1,5 +1,8 @@
 <h1>Message board homepage</h1>
-{% if lenth >= 3 %}
+{% lista=[] %}
+{% for postblog in all_posts_list %}
+	{{lista.append(postblog)}}
+{% if len(lista) <= 3 %}
 	<ul>
 		{% for postblog in all_posts_list %}
 			<li>{{postblog.text}}</li>
@@ -7,5 +10,5 @@
 
 	</ul>
 {% else %}
-	<p>Trere is less them 3 items</p>
+	<p>Trere is less them 4 items</p>
 {% endif %}

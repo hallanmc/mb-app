@@ -8,4 +8,3 @@ class HomePageView(ListView): # django: ListView
 	model = Post
 	template_name = 'home.html'
 	context_object_name = 'all_posts_list' # django: Making “friendly” template contexts
-	lenth = len(all_posts_list)
