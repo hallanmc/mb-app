@@ -1,14 +1,15 @@
 <h1>Message board homepage</h1>
-{{lista=[]}}
-{% for postblog in all_posts_list %}
-	{{lista.append(postblog)}}
-{% if len(lista) <= 3 %}
-	<ul>
-		{% for postblog in all_posts_list %}
-			<li>{{postblog.text}}</li>
-		{% endfor %}
-
-	</ul>
+{% if all_posts_list %}
+	N: {{all_posts_list|length}}
+	{% if N <=3 %}
+		<ul>
+			{% for postblog in all_posts_list %}
+				<li>{{postblog.text}}</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>Trere is less them 4 items</p>
+	{% endif %}
 {% else %}
-	<p>Trere is less them 4 items</p>
+	<p>No items</p>
 {% endif %}
