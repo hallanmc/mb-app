@@ -1,7 +1,7 @@
 <h1>Message board homepage</h1>
 {% if all_posts_list %}
 	N: {{all_posts_list|length}}
-	{% if N <=3 %}
+	{% if N <= 3 %}
 		<ul>
 			{% for postblog in all_posts_list %}
 				<li>{{postblog.text}}</li>
